@@ -25,4 +25,19 @@ public class HomeController {
 		}
 		return "home";
 	}
+	
+	@RequestMapping(value = "/home2", method = RequestMethod.GET)
+	public String homepage2(Model model)
+	{
+		try{
+			model.addAttribute("CurrPrincipal",
+			SecurityContextHolder.getContext().getAuthentication().getName());
+		}
+		catch (Exception e)
+		{
+			model.addAttribute("CurrPrincipal",
+					"-NAO LOGADO-");
+		}
+		return "home2";
+	}
 }
