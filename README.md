@@ -1,5 +1,4 @@
-teste oi
+Home Automation
+===========
 
-oi 
-
-oioi
+A Quick exemple to be deployed on the cubieboard A20.
