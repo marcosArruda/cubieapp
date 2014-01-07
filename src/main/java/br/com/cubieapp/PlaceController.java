@@ -1,6 +1,5 @@
 package br.com.cubieapp;
 
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 @RequestMapping("/a")
-public class AutomationController {
+public class PlaceController {
 	@RequestMapping(value = "/sala", method = RequestMethod.GET)
 	public String sala(Model model)
 	{
