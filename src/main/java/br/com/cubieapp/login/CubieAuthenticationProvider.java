@@ -26,6 +26,7 @@ public class CubieAuthenticationProvider implements AuthenticationProvider{
 		String user = auth.getName();
 		String senha = auth.getCredentials().toString();
 		if (testMarcos(user, senha)
+		||  testOlivia(user, senha)
 		||  testNewton(user, senha)
 		||	testWaldemar(user, senha)
 		||  testMae(user, senha))
@@ -46,6 +47,11 @@ public class CubieAuthenticationProvider implements AuthenticationProvider{
 	private boolean testMarcos(String user, String senha)
 	{
 		return user.equals("marcos") && senha.equals("200510casa");
+	}
+	
+	private boolean testOlivia(String user, String senha)
+	{
+		return user.equals("pecosa") && senha.equals("pecoso");
 	}
 	
 	private boolean testNewton(String user, String senha)
