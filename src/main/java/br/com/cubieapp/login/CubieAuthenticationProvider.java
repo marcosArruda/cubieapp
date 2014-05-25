@@ -26,6 +26,7 @@ public class CubieAuthenticationProvider implements AuthenticationProvider{
 		String user = auth.getName();
 		String senha = auth.getCredentials().toString();
 		if (testMarcos(user, senha)
+				
 		||  testOlivia(user, senha)
 		||  testNewton(user, senha)
 		||	testWaldemar(user, senha)
