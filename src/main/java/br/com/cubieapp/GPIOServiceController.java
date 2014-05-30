@@ -26,7 +26,7 @@ public class GPIOServiceController {
 	@RequestMapping(value = "/set-direction", method = RequestMethod.GET)
 	@ResponseBody
 	public String setDirection(@RequestParam("pin") int pin, @RequestParam("dir") String dir) {
-		// URI : /gpio/setDirection?pin=67&dir=out
+		// URI : /gpio/set-direction?pin=67&dir=out
 		String pinName = PinMapper.getPinName(pin);
 		return CommandExecutor.execute("echo " + dir + " > /sys/class/gpio/" + pinName + "/direction");
 	}
@@ -34,7 +34,7 @@ public class GPIOServiceController {
 	@RequestMapping(value = "/set-value", method = RequestMethod.GET)
 	@ResponseBody
 	public String setValue(@RequestParam("pin") int pin, @RequestParam("val") int val) {
-		// URI : /gpio/setValue?pin=67&val=1
+		// URI : /gpio/set-value?pin=67&val=1
 		String pinName = PinMapper.getPinName(pin);
 		return CommandExecutor.execute("echo " + val + " > /sys/class/gpio/" + pinName + "/value");
 	}
@@ -42,7 +42,7 @@ public class GPIOServiceController {
 	@RequestMapping(value = "/get-value", method = RequestMethod.GET)
 	@ResponseBody
 	public String readValue(@RequestParam("pin") int pin) {
-		// URI : /gpio/readValue?pin=67
+		// URI : /gpio/get-value?pin=67
 		String pinName = PinMapper.getPinName(pin);
 		return CommandExecutor.execute("cat /sys/class/gpio/" + pinName + "/value");
 	}
